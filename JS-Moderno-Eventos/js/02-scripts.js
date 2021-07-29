@@ -1,23 +1,25 @@
-// En este video estaremos viendo como seleccionar elementos por su clase...
+// Eventos con el mouse
+// =================================
 
-// Seleccionando el header...
+const nav = document.querySelector('.navegacion');
 
-                // Todos tus selectores inician con document...
-const header = document.getElementsByClassName('header'); // Es muy importante las mayusculas y minusculas...
-console.log(header);
+// evento click
+nav.addEventListener('click', () => {
+    console.log('CLICK en NAV');
+})
+// evento cuando se pasa el mouse por una zona
+nav.addEventListener('mouseenter', () => {
+    console.log('MOUSE sobre NAV');
+    nav.style.backgroundColor = 'blue';
+})
+// evento cuando el mouse sale de una zona
+nav.addEventListener('mouseout', () => {
+    console.log('MOUSE aliendo de NAV');
+    nav.style.backgroundColor = 'transparent';
+})
 
-const hero = document.getElementsByClassName('contenido-hero');
-console.log(hero);
+// Otros
 
-
-// Como las classes se pueden repetir, obviamente todas las coincidencias de classes se asignaran a contenedores.
-const contenedores = document.getElementsByClassName('contenedor');
-console.log(contenedores);
-
-
-// Si una clase no existe, no va a retornar nada...
-const noExiste = document.getElementsByClassName('no-existe');
-console.log(noExiste);
-
-(noExiste) ? console.log("no hay") : console.log("hay")
-
+// mousedown: Similar al click
+// dblclick: Double click
+// mouseup:  Cuando se suelta la pulsación del mouse
